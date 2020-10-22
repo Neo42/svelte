@@ -8,28 +8,28 @@
 
 		return {
 			slug: params.slug,
-			chapter: await res.json()
+			chapter: await res.json(),
 		};
 	}
 </script>
 
 <script>
-	import Repl from '@sveltejs/svelte-repl';
-	import { getContext } from 'svelte';
+	import Repl from "@sveltejs/svelte-repl";
+	import { getContext } from "svelte";
 
-	import ScreenToggle from '../../../components/ScreenToggle.svelte';
-	import TableOfContents from './_TableOfContents.svelte';
+	import ScreenToggle from "../../../components/ScreenToggle.svelte";
+	import TableOfContents from "./_TableOfContents.svelte";
 
 	import {
 		mapbox_setup, // needed for context API tutorial
 		rollupUrl,
-		svelteUrl
-	} from '../../../config';
+		svelteUrl,
+	} from "../../../config";
 
 	export let slug;
 	export let chapter;
 
-	const { sections } = getContext('tutorial');
+	const { sections } = getContext("tutorial");
 
 	let repl;
 	let prev;
@@ -39,18 +39,19 @@
 	let width = process.browser ? window.innerWidth : 1000;
 	let offset = 0;
 
-	sections.forEach(section => {
-		section.chapters.forEach(chapter => {
+	sections.forEach((section) => {
+		section.chapters.forEach((chapter) => {
 			const obj = {
 				slug: chapter.slug,
 				section,
 				chapter,
-				prev
+				prev,
 			};
 
 			lookup.set(chapter.slug, obj);
 
-			if (process.browser) { // pending https://github.com/sveltejs/svelte/issues/2135
+			if (process.browser) {
+				// pending https://github.com/sveltejs/svelte/issues/2135
 				if (prev) prev.next = obj;
 				prev = obj;
 			}
@@ -62,21 +63,22 @@
 
 	// TODO: this will need to be changed to the master branch, and probably should be dynamic instead of included
 	//   here statically
-	const tutorial_repo_link = 'https://github.com/sveltejs/svelte/tree/master/site/content/tutorial';
+	const tutorial_repo_link =
+		"https://github.com/Neo42/svelte/tree/master/site/content/tutorial";
 
 	$: selected = lookup.get(slug);
 	$: improve_link = `${tutorial_repo_link}/${selected.chapter.section_dir}/${selected.chapter.chapter_dir}`;
 
-	const clone = file => ({
+	const clone = (file) => ({
 		name: file.name,
 		type: file.type,
-		source: file.source
+		source: file.source,
 	});
 
 	$: if (repl) {
 		completed = false;
 		repl.set({
-			components: chapter.app_a.map(clone)
+			components: chapter.app_a.map(clone),
 		});
 	}
 
@@ -84,13 +86,13 @@
 
 	function reset() {
 		repl.update({
-			components: chapter.app_a.map(clone)
+			components: chapter.app_a.map(clone),
 		});
 	}
 
 	function complete() {
 		repl.update({
-			components: chapter.app_b.map(clone)
+			components: chapter.app_b.map(clone),
 		});
 	}
 
@@ -99,10 +101,12 @@
 	function handle_change(event) {
 		completed = event.detail.components.every((file, i) => {
 			const expected = chapter.app_b[i];
-			return expected && (
+			return (
+				expected &&
 				file.name === expected.name &&
 				file.type === expected.type &&
-				file.source.trim().replace(/\s+$/gm, '') === expected.source.trim().replace(/\s+$/gm, '')
+				file.source.trim().replace(/\s+$/gm, "") ===
+					expected.source.trim().replace(/\s+$/gm, "")
 			);
 		});
 	}
@@ -122,15 +126,21 @@
 		width: 300%;
 		height: 100%;
 		grid-template-columns: 33.333% 66.666%;
-		transition: transform .3s;
+		transition: transform 0.3s;
 		grid-auto-rows: 100%;
 	}
 
-	.offset-1 { transform: translate(-33.333%, 0); }
-	.offset-2 { transform: translate(-66.666%, 0); }
+	.offset-1 {
+		transform: translate(-33.333%, 0);
+	}
+	.offset-2 {
+		transform: translate(-66.666%, 0);
+	}
 
 	@media (min-width: 768px) {
-		.tutorial-outer { padding: 0 }
+		.tutorial-outer {
+			padding: 0;
+		}
 
 		.viewport {
 			width: 100%;
@@ -141,7 +151,10 @@
 			transition: none;
 		}
 
-		.offset-1, .offset-2 { transform: none; }
+		.offset-1,
+		.offset-2 {
+			transform: none;
+		}
 	}
 
 	.tutorial-text {
@@ -169,7 +182,7 @@
 	}
 
 	.chapter-markup :global(h2:first-child) {
-		margin-top: .4rem;
+		margin-top: 0.4rem;
 	}
 
 	.chapter-markup :global(a) {
@@ -180,13 +193,12 @@
 		color: white;
 	}
 
-
 	.chapter-markup :global(ul) {
 		padding: 0 0 0 2em;
 	}
 
 	.chapter-markup :global(blockquote) {
-		background-color: rgba(0,0,0,.17);
+		background-color: rgba(0, 0, 0, 0.17);
 		color: var(--sidebar-text);
 	}
 
@@ -196,7 +208,7 @@
 	}
 
 	.chapter-markup::-webkit-scrollbar-thumb {
-		background-color: rgba(255,255,255,.7);
+		background-color: rgba(255, 255, 255, 0.7);
 		border-radius: 1em;
 		outline: 1px solid green;
 	}
@@ -204,28 +216,28 @@
 	.chapter-markup :global(p) > :global(code),
 	.chapter-markup :global(ul) :global(code) {
 		color: var(--sidebar-text);
-		background: rgba(0,0,0,.12);
-		padding: .2em .4em .3em;
+		background: rgba(0, 0, 0, 0.12);
+		padding: 0.2em 0.4em 0.3em;
 		white-space: nowrap;
 		position: relative;
 		top: -0.1em;
 	}
 
 	.controls {
-		border-top: 1px solid rgba(255,255,255,.15);
+		border-top: 1px solid rgba(255, 255, 255, 0.15);
 		padding: 1em 0 0 0;
 		display: flex;
 	}
 
 	.show {
 		background: var(--prime);
-		padding: .3em .7em;
+		padding: 0.3em 0.7em;
 		border-radius: var(--border-r);
-		top: .1em;
+		top: 0.1em;
 		position: relative;
 		font-size: var(--h5);
 		font-weight: 300;
-		color: rgba(255,255,255,0.7);
+		color: rgba(255, 255, 255, 0.7);
 	}
 
 	.show:hover {
@@ -240,14 +252,14 @@
 	}
 
 	.improve-chapter {
-		padding: 1em 0 .5em 0;
+		padding: 1em 0 0.5em 0;
 	}
 
 	.improve-chapter a {
-		padding: 0 .1em;
+		padding: 0 0.1em;
 		font-size: 14px;
 		text-decoration: none;
-		opacity: .3;
+		opacity: 0.3;
 		padding-left: 1.2em;
 		background: no-repeat 0 50% url(/icons/edit.svg);
 		background-size: 1em 1em;
@@ -259,20 +271,29 @@
 </style>
 
 <svelte:head>
-	<title>{selected.section.title} / {selected.chapter.title} • Svelte Tutorial</title>
+	<title>
+		{selected.section.title}
+		/
+		{selected.chapter.title}
+		• Svelte Tutorial
+	</title>
 
-	<meta name="twitter:title" content="Svelte tutorial">
-	<meta name="twitter:description" content="{selected.section.title} / {selected.chapter.title}">
-	<meta name="Description" content="{selected.section.title} / {selected.chapter.title}">
+	<meta name="twitter:title" content="Svelte tutorial" />
+	<meta
+		name="twitter:description"
+		content="{selected.section.title} / {selected.chapter.title}" />
+	<meta
+		name="Description"
+		content="{selected.section.title} / {selected.chapter.title}" />
 </svelte:head>
 
-<svelte:window bind:innerWidth={width}/>
+<svelte:window bind:innerWidth={width} />
 
 <div class="tutorial-outer">
 	<div class="viewport offset-{offset}">
 		<div class="tutorial-text">
 			<div class="table-of-contents">
-				<TableOfContents {sections} {slug} {selected}/>
+				<TableOfContents {sections} {slug} {selected} />
 			</div>
 
 			<div class="chapter-markup" bind:this={scrollable}>
@@ -282,18 +303,20 @@
 					{#if chapter.app_b}
 						<!-- TODO disable this button when the contents of the REPL
 							matches the expected end result -->
-						<button class="show" on:click="{() => completed ? reset() : complete()}">
+						<button
+							class="show"
+							on:click={() => (completed ? reset() : complete())}>
 							{completed ? 'Reset' : 'Show me'}
 						</button>
 					{/if}
 
 					{#if selected.next}
-						<a class="next" href="tutorial/{selected.next.slug}">Next</a>
+						<a class="next" href="tutorial/{selected.next.slug}">下一节</a>
 					{/if}
 				</div>
 
 				<div class="improve-chapter">
-					<a class="no-underline" href={improve_link}>Edit this chapter</a>
+					<a class="no-underline" href={improve_link}>编辑这一节</a>
 				</div>
 			</div>
 		</div>
@@ -308,12 +331,11 @@
 				fixed={mobile}
 				on:change={handle_change}
 				injectedJS={mapbox_setup}
-				relaxed
-			/>
+				relaxed />
 		</div>
 	</div>
 
 	{#if mobile}
-		<ScreenToggle bind:offset labels={['tutorial', 'input', 'output']}/>
+		<ScreenToggle bind:offset labels={['tutorial', 'input', 'output']} />
 	{/if}
 </div>
