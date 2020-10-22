@@ -275,7 +275,7 @@
 		{selected.section.title}
 		/
 		{selected.chapter.title}
-		• Svelte Tutorial
+		• Svelte 教程
 	</title>
 
 	<meta name="twitter:title" content="Svelte tutorial" />
