@@ -1,32 +1,29 @@
 ---
-title: Basics
+title: 基础
 ---
 
-Welcome to the Svelte tutorial. This will teach you everything you need to know to build fast, small web applications easily.
+欢迎来到 Svelte 教程。这个教程将教给你一切你需要知道的东西，让你轻松地构建快速、小型的 Web 应用程序。
 
-You can also consult the [API docs](docs) and the [examples](examples), or — if you're impatient to start hacking on your machine locally — the [60-second quickstart](blog/the-easiest-way-to-get-started).
+你也可以参考[API 文档](docs)和[示例](examples)，或者如果你等不及马上就想在你的电脑上开搞：[60 秒快速开始](blog/the-easiest-way-to-get-started)。
 
+## 什么是 Svelte
 
-## What is Svelte?
+Svelte 是一个用来构建快速 Web 应用的工具。
 
-Svelte is a tool for building fast web applications.
+它与 React 和 Vue 等 JavaScript 框架类似，而它们的目标都是让我们更容易地构建细腻的交互式用户界面。
 
-It is similar to JavaScript frameworks such as React and Vue, which share a goal of making it easy to build slick interactive user interfaces.
+但有一个至关重要的区别是：Svelte 会在 _构建阶段_ 将你的应用转换为最合适的 JavaScript 代码，而不是在 _运行阶段_ 编译你的应用代码。这意味着你不需要因为框架的抽象而付出性能成本，而且你的应用程序在第一次加载时也不会受到影响。
 
-But there's a crucial difference: Svelte converts your app into ideal JavaScript at *build time*, rather than interpreting your application code at *run time*. This means you don't pay the performance cost of the framework's abstractions, and you don't incur a penalty when your app first loads.
+你可以用 Svelte 构建你的整个应用程序，或者你也可以把它逐步添加到现有的代码库中。你还可以将组件作为独立的包发布，在任何地方都可以使用，而不会因为传统框架的依赖问题而烦恼。
 
-You can build your entire app with Svelte, or you can add it incrementally to an existing codebase. You can also ship components as standalone packages that work anywhere, without the overhead of a dependency on a conventional framework.
+## 如何使用这个教程
 
+为了理解 Svelte，你需要对 HTML、CSS 和 JavaScript 有基本的了解。
 
-## How to use this tutorial
+在你学习这个教程的过程中，你将会看到一些旨在讲解新功能的小练习。后一章学习的知识会建立在前一章的基础上，所以建议你从头到尾看一遍。如果需要的话，你可以通过上面的下拉菜单选择章节（点击 “入门/基础”）。
 
-You'll need to have basic familiarity with HTML, CSS and JavaScript to understand Svelte.
+每一章教程都会有一个“给我看”按钮，如果你在理解教程时遇到困难，可以点击这个按钮。尽量不要太依赖它；把每个提示中的代码块都应该写在哪里弄清楚并在编辑器里手动打出来，这样你会学的更快。
 
-As you progress through the tutorial, you'll be presented with mini exercises designed to illustrate new features. Later chapters build on the knowledge gained in earlier ones, so it's recommended that you go from start to finish. If necessary, you can navigate via the dropdown above (click 'Introduction / Basics').
+## 理解组件
 
-Each tutorial chapter will have a 'Show me' button that you can click if you get stuck following the instructions. Try not to rely on it too much; you will learn faster by figuring out where to put each suggested code block and manually typing it in to the editor.
-
-
-## Understanding components
-
-In Svelte, an application is composed from one or more *components*. A component is a reusable self-contained block of code that encapsulates HTML, CSS and JavaScript that belong together, written into a `.svelte` file. The 'hello world' example in the code editor is a simple component.
+在 Svelte 中，一个应用程序是由一个或多个 _组件_ 组成的。组件是一个可以重复使用、自给自足的代码块，这个代码块封装了相互关联的 HTML、CSS 和 JavaScript，把它们都写进了一个`.svelte`文件里。代码编辑器中的 "hello world "示例就是一个简单的组件。
