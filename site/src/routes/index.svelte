@@ -42,53 +42,47 @@
 
 <Blurb>
 	<a href="blog/write-less-code" slot="one">
-		<h2>Write less code</h2>
-		<p>
-			Build boilerplate-free components using languages you already know — HTML,
-			CSS and JavaScript
-		</p>
+		<h2>编写更少的代码</h2>
+		<p>用您已经掌握的语言—— HTML 、 CSS 和 JavaScript 来构建没有样板的组件</p>
 
-		<span class="learn-more">learn more</span>
+		<span class="learn-more">了解更多</span>
 	</a>
 
 	<a href="blog/virtual-dom-is-pure-overhead" slot="two">
-		<h2>No virtual DOM</h2>
+		<h2>没有虚拟 DOM</h2>
 		<p>
-			Svelte compiles your code to tiny, framework-less vanilla JS — your app
-			starts fast and stays fast
+			Svelte将您的代码编译成精炼无框架的原生 JS
+			，使您的应用启动速度快、一直速度快。
 		</p>
 
-		<span class="learn-more">learn more</span>
+		<span class="learn-more">了解更多</span>
 	</a>
 
 	<a href="blog/svelte-3-rethinking-reactivity" slot="three">
-		<h2>Truly reactive</h2>
-		<p>
-			No more complex state management libraries — Svelte brings reactivity to
-			JavaScript itself
-		</p>
+		<h2>真正的响应能力</h2>
+		<p>不再需要复杂的状态管理库-- Svelte 为 JavaScript 本身赋予响应能力。</p>
 
-		<span class="learn-more">learn more</span>
+		<span class="learn-more">了解更多</span>
 	</a>
 
 	<div class="description" slot="what">
 		<p>
-			Svelte is a radical new approach to building user interfaces. Whereas
-			traditional frameworks like React and Vue do the bulk of their work in the
-			<em>browser</em>, Svelte shifts that work into a
-			<em>compile step</em>
-			that happens when you build your app.
+			Svelte是一种全新的构建用户界面的方法。React 和 Vue
+			等传统框架是把大部分工作放在
+			<em>浏览器</em>
+			中进行，而Svelte则是将这些工作转移到跟你构建应用同时发生的
+			<em>编译阶段</em>
+			中。
 		</p>
 
 		<p>
-			Instead of using techniques like virtual DOM diffing, Svelte writes code
-			that surgically updates the DOM when the state of your app changes.
+			与其采用虚拟 DOM 比较差异的做法，Svelte
+			写出的代码会在你的应用状态发生变化时以手术刀般的精度更新 DOM 。
 		</p>
 
 		<p>
-			<a href="blog/svelte-3-rethinking-reactivity">Read the introductory blog
-				post</a>
-			to learn more.
+			<a href="blog/svelte-3-rethinking-reactivity">阅读这篇介绍性博客文章</a>
+			来了解更多。
 		</p>
 	</div>
 
@@ -102,8 +96,8 @@ npx degit <a
 				href="https://github.com/sveltejs/template"
 				style="user-select: initial;">sveltejs/template</a> my-svelte-project
 <span
-				class="token comment"># or download and extract <a
-					href="https://github.com/sveltejs/template/archive/master.zip">this .zip file</a></span>
+				class="token comment"># 或者下载并解压<a
+					href="https://github.com/sveltejs/template/archive/master.zip">这个 .zip 文件</a></span>
 cd my-svelte-project
 
 npm install
@@ -111,56 +105,49 @@ npm run dev
 		</pre>
 
 		<p style="flex: 1">
-			See the
-			<a href="blog/the-easiest-way-to-get-started">quickstart guide</a>
-			for more information.
+			查看这篇
+			<a href="blog/the-easiest-way-to-get-started">快速开始指南</a>
+			了解更多信息。
 		</p>
 
-		<p class="cta"><a rel="prefetch" href="tutorial">Learn Svelte</a></p>
+		<p class="cta"><a rel="prefetch" href="tutorial">学习 Svelte</a></p>
 	</div>
 </Blurb>
 
 <div class="examples">
 	<Example id="hello-world">
-		<p>Svelte components are built on top of HTML. Just add data.</p>
+		<p>Svelte 组件是在 HTML 的基础上构建的。试试添加数据。</p>
 	</Example>
 
 	<Example id="nested-components">
 		<p>
-			CSS is component-scoped by default — no more style collisions or
-			specificity wars. Or you can
-			<a href="/blog/svelte-css-in-js">use your favourite CSS-in-JS library</a>.
+			CSS 默认只在它所在的组件内部起作用 —
+			再也不会有样式冲突和优先级战争了。你也可以<a
+				href="/blog/svelte-css-in-js">使用你最喜欢的 CSS-in-JS 库</a>.
 		</p>
 	</Example>
 
 	<Example id="reactive-assignments">
-		<p>
-			Trigger efficient, granular updates by assigning to local variables. The
-			compiler does the rest.
-		</p>
+		<p>通过给局部变量赋值来触发高效而细粒度的更新。把剩下的都交给编译器。</p>
 	</Example>
 
 	<Example id="svg-transitions">
-		<p>
-			Build beautiful UIs with a powerful, performant transition engine built
-			right into the framework.
-		</p>
+		<p>用强大而高性能的框架内置过渡引擎构建漂亮的用户界面。</p>
 	</Example>
 </div>
 
 <Section>
-	<h3>Who's using Svelte?</h3>
+	<h3>谁在使用 Svelte ?</h3>
 
 	<WhosUsingSvelte />
 </Section>
 
 <Section>
-	<h3>Contributors</h3>
+	<h3>贡献者</h3>
 
 	<p>
-		Svelte is free and open source software, made possible by the work of dozens
-		of volunteers.
-		<a href="https://github.com/sveltejs/svelte">Join us!</a>
+		Svelte 是免费的开源软件，是一群志愿者的努力使它成为可能。
+		<a href="https://github.com/sveltejs/svelte">加入我们!</a>
 	</p>
 
 	<Contributors />
