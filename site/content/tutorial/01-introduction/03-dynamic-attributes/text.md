@@ -1,35 +1,33 @@
 ---
-title: Dynamic attributes
+title: 动态属性
 ---
 
-Just like you can use curly braces to control text, you can use them to control element attributes.
+就像你可以使用大括号来控制文本一样，你也可以使用它们来控制元素属性。
 
-Our image is missing a `src` — let's add one:
+我们的图像缺少一个 `src`，让我们添加一个：
 
 ```html
-<img src={src}>
+<img src="{src}" />
 ```
 
-That's better. But Svelte is giving us a warning:
+好多了。但 Svelte 给了我们一个警告。
 
 > A11y: &lt;img&gt; element should have an alt attribute
 
-When building web apps, it's important to make sure that they're *accessible* to the broadest possible userbase, including people with (for example) impaired vision or motion, or people without powerful hardware or good internet connections. Accessibility (shortened to a11y) isn't always easy to get right, but Svelte will help by warning you if you write inaccessible markup.
+在搭建 web 应用时，确保它们对于尽可能广泛的用户群来说无障碍是非常重要的，包括（例如）有视力或运动障碍的人，或者没有性能强大的硬件或较高网速的人。无障碍（简称为 a11y）并不总是那么容易就可以做到的，不过 Svelte 会在你写出不具有无障碍性的标记时向你发出警告。
 
-In this case, we're missing the `alt` attribute that describes the image for people using screenreaders, or people with slow or flaky internet connections that can't download the image. Let's add one:
-
-```html
-<img src={src} alt="A man dances.">
-```
-
-We can use curly braces *inside* attributes. Try changing it to `"{name} dances."` — remember to declare a `name` variable in the `<script>` block.
-
-
-## Shorthand attributes
-
-It's not uncommon to have an attribute where the name and value are the same, like `src={src}`. Svelte gives us a convenient shorthand for these cases:
+在这里的情况下，我们少写了为使用读屏器的人，或者网络连接缓慢或不稳定而无法下载图片的人描述图片的 `alt` 属性。我们添加一下：
 
 ```html
-<img {src} alt="A man dances.">
+<img src="{src}" alt="A man dances." />
 ```
 
+我们可以在属性里面使用大括号。试着把它改成 `"{name} dances."`--记得在 `<script>` 块中声明一个`name`变量。
+
+## 属性简写
+
+出现一个属性的名称和值相同的情况很常见，比如 `src={src}` 。Svelte 为我们提供了一个方便的简写来处理这些情况。
+
+```html
+<img {src} alt="A man dances." />
+```

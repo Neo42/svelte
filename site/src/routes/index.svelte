@@ -27,7 +27,7 @@
 </style>
 
 <svelte:head>
-	<title>Svelte • 经过赛博强化的 web 应用</title>
+	<title>Svelte • 赛博强化型 web 应用</title>
 
 	<meta name="twitter:title" content="Svelte" />
 	<meta name="twitter:description" content="Cybernetically enhanced web apps" />
@@ -36,7 +36,7 @@
 
 <Hero
 	title="Svelte"
-	tagline="经过赛博强化的 web 应用"
+	tagline="赛博强化型 web 应用"
 	outline="svelte-logo-outline.svg"
 	logotype="svelte-logotype.svg" />
 
