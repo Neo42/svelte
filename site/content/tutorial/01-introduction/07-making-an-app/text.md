@@ -1,32 +1,32 @@
 ---
-title: Making an app
+title: 制作一个应用程序
 ---
 
-This tutorial is designed to get you familiar with the process of writing components. But at some point, you'll want to start writing components in the comfort of your own text editor.
+这个教程旨在让你熟悉编写组件的过程。但在某些时候，你会想在自己的文本编辑器中开始编写组件。
 
-First, you'll need to integrate Svelte with a build tool. There are officially maintained plugins for [Rollup](https://rollupjs.org) and [webpack](https://webpack.js.org/)...
+首先，你需要把 Svelte 和一个构建工具整合起来。 这里有官方维护的 [Rollup](https://rollupjs.org) 和 [webpack](https://webpack.js.org/) 插件...
 
-* [rollup-plugin-svelte](https://github.com/sveltejs/rollup-plugin-svelte)
-* [svelte-loader](https://github.com/sveltejs/svelte-loader)
+- [rollup-plugin-svelte](https://github.com/sveltejs/rollup-plugin-svelte)
+- [svelte-loader](https://github.com/sveltejs/svelte-loader)
 
-...and a variety of [community-maintained ones](https://github.com/sveltejs/integrations#bundler-plugins).
+...还有各种各样的[社区维护插件](https://github.com/sveltejs/integrations#bundler-plugins)。
 
-Don't worry if you're relatively new to web development and haven't used these tools before. We've prepared a simple step-by-step guide, [Svelte for new developers](blog/svelte-for-new-developers), which walks you through the process.
+如果你对 web 开发还比较陌生而且并没有使用过这些工具，也不要担心。我们准备了一个简单的分步骤指南，[给新开发者的 Svelte](blog/svelte-for-new-developers)，它将带你走完这整个过程。
 
-You'll also want to configure your text editor. If you're using VS Code, install the [Svelte extension](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode), otherwise follow [this guide](blog/setting-up-your-editor) to configure your text editor to treat `.svelte` files the same as `.html` for the sake of syntax highlighting.
+你还需要配置你的文本编辑器。如果你使用的是 VS Code，就安装[Svelte 扩展](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)，或者按照[这个指南](blog/setting-up-your-editor)把你的文本编辑器配置成将 `.svelte` 文件与 `.html` 同等对待，从而实现语法高亮。
 
-Then, once you've got your project set up, using Svelte components is easy. The compiler turns each component into a regular JavaScript class — just import it and instantiate with `new`:
+然后，只要你设置好了你的项目，使用 Svelte 组件就很容易了。编译器会把每个组件变成一个普通的 JavaScript 类 -- 直接导入它并使用 `new` 实例化：
 
 ```js
-import App from './App.svelte';
+import App from "./App.svelte";
 
 const app = new App({
 	target: document.body,
 	props: {
-		// we'll learn about props later
-		answer: 42
-	}
+		// 我们之后会了解 props
+		answer: 42,
+	},
 });
 ```
 
-You can then interact with `app` using the [component API](docs#Client-side_component_API) if you need to.
+如果需要的话，你之后可以使用[组件 API](docs#Client-side_component_API)与 `app` 进行交互。

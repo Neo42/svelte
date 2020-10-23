@@ -27,7 +27,7 @@
 </style>
 
 <svelte:head>
-	<title>Svelte • 赛博强化型 web 应用</title>
+	<title>Svelte • 赛博强化型 web 应用程序</title>
 
 	<meta name="twitter:title" content="Svelte" />
 	<meta name="twitter:description" content="Cybernetically enhanced web apps" />
@@ -36,14 +36,14 @@
 
 <Hero
 	title="Svelte"
-	tagline="赛博强化型 web 应用"
+	tagline="赛博强化型 web 应用程序"
 	outline="svelte-logo-outline.svg"
 	logotype="svelte-logotype.svg" />
 
 <Blurb>
 	<a href="blog/write-less-code" slot="one">
 		<h2>编写更少的代码</h2>
-		<p>用您已经掌握的语言—— HTML 、 CSS 和 JavaScript 来构建没有样板的组件</p>
+		<p>用你已经掌握的语言—— HTML 、 CSS 和 JavaScript 来构建没有样板的组件</p>
 
 		<span class="learn-more">了解更多</span>
 	</a>
@@ -51,8 +51,8 @@
 	<a href="blog/virtual-dom-is-pure-overhead" slot="two">
 		<h2>没有虚拟 DOM</h2>
 		<p>
-			Svelte将您的代码编译成精炼无框架的原生 JS
-			，使您的应用启动速度快、一直速度快。
+			Svelte将你的代码编译成精炼无框架的原生 JS
+			，使你的应用程序启动速度快、一直速度快。
 		</p>
 
 		<span class="learn-more">了解更多</span>
@@ -70,14 +70,14 @@
 			Svelte是一种全新的构建用户界面的方法。React 和 Vue
 			等传统框架是把大部分工作放在
 			<em>浏览器</em>
-			中进行，而Svelte则是将这些工作转移到跟你构建应用同时发生的
+			中进行，而Svelte则是将这些工作转移到跟你构建应用程序同时发生的
 			<em>编译阶段</em>
 			中。
 		</p>
 
 		<p>
 			与其采用虚拟 DOM 比较差异的做法，Svelte
-			写出的代码会在你的应用状态发生变化时以手术刀般的精度更新 DOM 。
+			写出的代码会在你的应用程序状态发生变化时以手术刀般的精度更新 DOM 。
 		</p>
 
 		<p>

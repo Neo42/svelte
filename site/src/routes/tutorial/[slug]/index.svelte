@@ -306,7 +306,7 @@
 						<button
 							class="show"
 							on:click={() => (completed ? reset() : complete())}>
-							{completed ? 'Reset' : 'Show me'}
+							{completed ? 'Reset' : '给我看'}
 						</button>
 					{/if}
 

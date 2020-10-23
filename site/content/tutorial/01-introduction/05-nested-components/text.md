@@ -1,24 +1,24 @@
 ---
-title: Nested components
+title: 嵌套组件
 ---
 
-It would be impractical to put your entire app in a single component. Instead, we can import components from other files and include them as though we were including elements.
+如果我们把整个应用程序都放在一个组件中，那将是不切实际的。相反，我们可以从其他文件中导入组件，并像包含元素一样包含它们。
 
-Add a `<script>` tag that imports `Nested.svelte`...
+添加一个导入 `Nested.svelte` 的 `<script>` 标签...
 
 ```html
 <script>
-	import Nested from './Nested.svelte';
+	import Nested from "./Nested.svelte";
 </script>
 ```
 
-...then add it to the markup:
+...然后把它添加到标记中:
 
 ```html
 <p>This is a paragraph.</p>
-<Nested/>
+<Nested />
 ```
 
-Notice that even though `Nested.svelte` has a `<p>` element, the styles from `App.svelte` don't leak in.
+请注意，尽管 `Nested.svelte` 有一个 `<p>` 元素，但 `App.svelte` 的样式并没有泄露进来。
 
-Also notice that the component name `Nested` is capitalised. This convention has been adopted to allow us to differentiate between user-defined components and regular HTML tags.
+还有请注意，组件名称 `Nested` 是大写的。采用这个惯例是为了让我们能够区分用户定义的组件和一般的 HTML 标签。

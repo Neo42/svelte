@@ -8,7 +8,7 @@ title: 添加数据
 
 ```html
 <script>
-  let name = 'world';
+	let name = "world";
 </script>
 
 <h1>Hello world!</h1>

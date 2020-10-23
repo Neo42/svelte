@@ -1,15 +1,15 @@
 ---
-title: HTML tags
+title: HTML 标签
 ---
 
-Ordinarily, strings are inserted as plain text, meaning that characters like `<` and `>` have no special meaning.
+通常，字符串是以纯文本的形式插入的，这意味着 `<` 和 `>` 之类的字符并没有特殊意义。
 
-But sometimes you need to render HTML directly into a component. For example, the words you're reading right now exist in a markdown file that gets included on this page as a blob of HTML.
+但有时你需要将 HTML 直接渲染到一个组件中。例如，你现在正在阅读的这段话存在于一个标记文件中，它将作为 HTML 的一个小块被包含在这个页面中。
 
-In Svelte, you do this with the special `{@html ...}` tag:
+在 Svelte 中，你可以使用特殊的 `{@html ...}` 标签来实现这一功能。
 
 ```html
 <p>{@html string}</p>
 ```
 
-> Svelte doesn't perform any sanitization of the expression inside `{@html ...}` before it gets inserted into the DOM. In other words, if you use this feature it's critical that you manually escape HTML that comes from sources you don't trust, otherwise you risk exposing your users to XSS attacks.
+> 在插入 DOM 之前，Svelte 不会对 `{@html ...}` 内的表达式进行任何消毒。换句话说，如果你使用这个功能，你就必须手动转义来自你不信任来源的 HTML，否则你就有可能使你的用户遭到 XSS 攻击。
