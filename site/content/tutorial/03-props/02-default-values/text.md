@@ -1,18 +1,17 @@
 ---
-title: Default values
+title: 默认值
 ---
 
-We can easily specify default values for props in `Nested.svelte`:
+我们可以很容易地在 `Nested.svelte` 中为 prop 指定默认值。
 
 ```html
 <script>
-	export let answer = 'a mystery';
+	export let answer = "a mystery";
 </script>
 ```
 
-If we now add a second component *without* an `answer` prop, it will fall back to the default:
+如果我们现在再添加一个 _不带_ `answer` prop 的组件，它将回到默认值。
 
 ```html
-<Nested answer={42}/>
-<Nested/>
+<Nested answer="{42}" /> <Nested />
 ```

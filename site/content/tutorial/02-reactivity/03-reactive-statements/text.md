@@ -1,14 +1,14 @@
 ---
-title: Statements
+title: 断言
 ---
 
-We're not limited to declaring reactive *values* — we can also run arbitrary *statements* reactively. For example, we can log the value of `count` whenever it changes:
+我们不只能声明响应式的值--我们还能响应式地运行任意语句。比如，每当 count 的值发生变化时，我们就可以将打印出来。
 
 ```js
 $: console.log(`the count is ${count}`);
 ```
 
-You can easily group statements together with a block:
+你可以很容易地用一个代码块把断言组合在一起。
 
 ```js
 $: {
@@ -17,7 +17,7 @@ $: {
 }
 ```
 
-You can even put the `$:` in front of things like `if` blocks:
+你甚至可以把 `$:` 放在 `if` 代码块之类的东西前面。
 
 ```js
 $: if (count >= 10) {

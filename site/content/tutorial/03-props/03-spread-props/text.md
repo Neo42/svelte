@@ -1,11 +1,11 @@
 ---
-title: Spread props
+title: 分散 prop
 ---
 
-If you have an object of properties, you can 'spread' them onto a component instead of specifying each one:
+如果你有一个属性对象，那么你可以将它们 "分散" 到一个组件上，而不是单独指定每一个属性。
 
 ```html
-<Info {...pkg}/>
+<Info {...pkg} />
 ```
 
-> Conversely, if you need to reference all the props that were passed into a component, including ones that weren't declared with `export`, you can do so by accessing `$$props` directly. It's not generally recommended, as it's difficult for Svelte to optimise, but it's useful in rare cases.
+> 相反地，如果你需要引用所有传递到组件中的 prop（包括那些不是用 `export` 声明的 prop），那么你可以通过直接访问 `$$props` 来实现。一般不推荐这样做，因为 Svelte 很难对其进行优化，但在极少数情况下是有用的。

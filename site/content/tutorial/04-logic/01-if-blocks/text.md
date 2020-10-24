@@ -1,23 +1,17 @@
 ---
-title: If blocks
+title: if 代码块
 ---
 
-HTML doesn't have a way of expressing *logic*, like conditionals and loops. Svelte does.
+HTML 并没有一种方式来表达条件和循环之类的 _逻辑_ 。不过 Svelte 有。
 
-To conditionally render some markup, we wrap it in an `if` block:
+为了有条件地显示一些标记，我们用一个 `if` 代码块把它包装起来。
 
 ```html
 {#if user.loggedIn}
-	<button on:click={toggle}>
-		Log out
-	</button>
-{/if}
-
-{#if !user.loggedIn}
-	<button on:click={toggle}>
-		Log in
-	</button>
+	<button on:click="{toggle}">Log out</button>
+{/if} {#if !user.loggedIn}
+	<button on:click="{toggle}">Log in</button>
 {/if}
 ```
 
-Try it — update the component, and click on the buttons.
+试试看吧 - 修改一下组件，然后点击按钮。

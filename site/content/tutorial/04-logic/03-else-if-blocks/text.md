@@ -1,8 +1,8 @@
 ---
-title: Else-if blocks
+title: else-if 代码块
 ---
 
-Multiple conditions can be 'chained' together with `else if`:
+`else if` 可以把多个条件连锁在一起。
 
 ```html
 {#if x > 10}
