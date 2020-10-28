@@ -2,7 +2,7 @@
 title: Inline handlers
 ---
 
-You can also declare event handlers inline:
+你也可以在行内声明事件处理程序。
 
 ```html
 <div on:mousemove="{e => m = { x: e.clientX, y: e.clientY }}">
@@ -10,6 +10,6 @@ You can also declare event handlers inline:
 </div>
 ```
 
-The quote marks are optional, but they're helpful for syntax highlighting in some environments.
+其中的引号是可以省略的，但是在某些环境中对语法高亮有帮助。
 
-> In some frameworks you may see recommendations to avoid inline event handlers for performance reasons, particularly inside loops. That advice doesn't apply to Svelte — the compiler will always do the right thing, whichever form you choose.
+> 一些框架可能会建议你因为性能而避免使用行内事件处理程序，特别是在循环中。这个建议并不适用于 Svelte --无论你选择哪种形式，编译器都会一直做正确的事。

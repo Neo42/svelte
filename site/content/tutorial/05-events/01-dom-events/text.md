@@ -2,7 +2,7 @@
 title: DOM events
 ---
 
-As we've briefly seen already, you can listen to any event on an element with the `on:` directive:
+正如我们简单见过的，你可以使用 `on:` 指令监听元素上的事件：
 
 ```html
 <div on:mousemove={handleMousemove}>

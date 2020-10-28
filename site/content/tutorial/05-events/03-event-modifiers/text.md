@@ -2,7 +2,7 @@
 title: Event modifiers
 ---
 
-DOM event handlers can have *modifiers* that alter their behaviour. For example, a handler with a `once` modifier will only run a single time:
+我们可以用 _修改器_ 来改变 DOM 事件处理程序的行为。例如，一个带有 `once` 修饰符的处理程序将会只运行一次。
 
 ```html
 <script>
@@ -16,14 +16,14 @@ DOM event handlers can have *modifiers* that alter their behaviour. For example,
 </button>
 ```
 
-The full list of modifiers:
+修饰符的完整列表：
 
-* `preventDefault` — calls `event.preventDefault()` before running the handler. Useful for client-side form handling, for example.
-* `stopPropagation` — calls `event.stopPropagation()`, preventing the event reaching the next element
-* `passive` — improves scrolling performance on touch/wheel events (Svelte will add it automatically where it's safe to do so)
-* `nonpassive` — explicitly set `passive: false`
-* `capture` — fires the handler during the *capture* phase instead of the *bubbling* phase ([MDN docs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture))
-* `once` — remove the handler after the first time it runs
-* `self` — only trigger handler if event.target is the element itself
+* `preventDefault`-在运行处理程序之前调用`event.preventDefault()`。例如，对客户端的表单处理很有用。
+* `stopPropagation`-调用`event.stopPropagation()`，防止事件到达下一个元素。
+* "被动" -- -- 提高触摸/轮子事件的滚动性能（Svelte将在安全的情况下自动添加）。
+* "nonpassive" -- -- 明确设置 "passive: false"。
+* `capture` -- -- 在*capture*阶段而不是*bubbling*阶段启动处理程序([MDN docs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture))
+* "once" -- -- 在第一次运行后删除处理程序。
+* `self`----只有当event.target是元素本身时才触发处理程序。
 
-You can chain modifiers together, e.g. `on:click|once|capture={...}`.
+您可以将修饰符连锁使用，例如`on:click|once|capture={...}`。
