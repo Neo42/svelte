@@ -1,16 +1,16 @@
 ---
-title: Group inputs
+title: 分组输入
 ---
 
-If you have multiple inputs relating to the same value, you can use `bind:group` along with the `value` attribute. Radio inputs in the same group are mutually exclusive; checkbox inputs in the same group form an array of selected values.
+如果你有多个输入都与同一个值有关，你可以使用 `bind:group` 和 `value` 属性。同一组中的单选框输入是互斥的；同一组中的复选框输入会形成一个被选中值的数组。
 
-Add `bind:group` to each input:
+为每个输入添加 `bind:group`。
 
 ```html
 <input type=radio bind:group={scoops} value={1}>
 ```
 
-In this case, we could make the code simpler by moving the checkbox inputs into an `each` block. First, add a `menu` variable to the `<script>` block...
+在这个例子中，我们可以通过将复选框的输入移到 `each` 代码块中来简化代码。首先，在 `<script>` 代码块中添加一个 `menu` 变量。
 
 ```js
 let menu = [
@@ -20,7 +20,7 @@ let menu = [
 ];
 ```
 
-...then replace the second section:
+...然后替换第二部分。
 
 ```html
 <h2>Flavours</h2>
@@ -33,4 +33,4 @@ let menu = [
 {/each}
 ```
 
-It's now easy to expand our ice cream menu in new and exciting directions.
+现在要把我们的冰淇淋菜单扩展成令人怦然心动的新模样就很容易了。

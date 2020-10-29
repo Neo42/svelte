@@ -1,17 +1,17 @@
 ---
-title: Textarea inputs
+title: textarea 输入
 ---
 
-The `<textarea>` element behaves similarly to a text input in Svelte — use `bind:value`:
+`<textarea>` 元素的行为和 Svelte 中的文本输入差不多--使用 `bind:value`：
 
 ```html
 <textarea bind:value={value}></textarea>
 ```
 
-In cases like these, where the names match, we can also use a shorthand form:
+在类似的情况下，如果名字相符，我们也可以使用简写形式。
 
 ```html
 <textarea bind:value></textarea>
 ```
 
-This applies to all bindings, not just textareas.
+这适用于所有的绑定，而不仅仅是文本区。

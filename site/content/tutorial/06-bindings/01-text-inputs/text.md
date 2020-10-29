@@ -1,15 +1,15 @@
 ---
-title: Text inputs
+title: 文本输入
 ---
 
-As a general rule, data flow in Svelte is *top down* — a parent component can set props on a child component, and a component can set attributes on an element, but not the other way around.
+一般规定，Svelte中的数据流是 _自上而下_ 的 -- 父组件可以在子组件上设置 prop，组件可以在元素上设置 prop，而不能反过来。
 
-Sometimes it's useful to break that rule. Take the case of the `<input>` element in this component — we *could* add an `on:input` event handler that sets the value of `name` to `event.target.value`, but it's a bit... boilerplatey. It gets even worse with other form elements, as we'll see.
+有时，我们需要打破这个规则。以这个组件中的`<input>`元素为例--我们可以添加一个 `on:input` 事件处理程序，将 `name` 的值设置为 `event.target.value` ，但这有点...模板味儿。对于其他表单元素，情况甚至会变得更严重，我们接下来会看到的。
 
-Instead, we can use the `bind:value` directive:
+我们可以转而使用 `bind:value` 指令。
 
 ```html
 <input bind:value={name}>
 ```
 
-This means that not only will changes to the value of `name` update the input value, but changes to the input value will update `name`.
+这行代码的意思是不仅 `name` 值的变化会更新输入值，而且输入值的变化也会更新 `name`。

@@ -1,12 +1,12 @@
 ---
-title: Event forwarding
+title: 事件转发
 ---
 
-Unlike DOM events, component events don't *bubble*. If you want to listen to an event on some deeply nested component, the intermediate components must *forward* the event.
+与 DOM 事件不同，组件事件并不会 _冒泡_。如果你想要监听的某个事件是绑定在一些嵌套得很深的组件上的，这个事件必须要经过中间那些的组件的 _转发_。
 
-In this case, we have the same `App.svelte` and `Inner.svelte` as in the [previous chapter](tutorial/component-events), but there's now an `Outer.svelte` component that contains `<Inner/>`.
+这里我们还保留着前一章节中的 `App.svelte` 和 `Inner.svelte`，但现在我们又加了一个包含着 `<Inner/>` 的 `Outer.svelte` 组件。
 
-One way we could solve the problem is adding `createEventDispatcher` to `Outer.svelte`, listening for the `message` event, and creating a handler for it:
+我们要想解决这个问题，有一种方法是在 `Outer.svelte` 中添加 `createEventDispatcher` ，监听 `message` 事件，并为其创建一个处理程序。
 
 ```html
 <script>
@@ -23,7 +23,7 @@ One way we could solve the problem is adding `createEventDispatcher` to `Outer.s
 <Inner on:message={forward}/>
 ```
 
-But that's a lot of code to write, so Svelte gives us an equivalent shorthand — an `on:message` event directive without a value means 'forward all `message` events'.
+但这需要写很多代码，所以 Svelte 给了我们一个效果相同的简写 -- 一个没有值的 `on:message` 事件指令意味着 “转发所有的 `message` 事件”。
 
 ```html
 <script>

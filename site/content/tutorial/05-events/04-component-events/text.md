@@ -1,8 +1,8 @@
 ---
-title: Component events
+title: 组件事件
 ---
 
-Components can also dispatch events. To do so, they must create an event dispatcher. Update `Inner.svelte`:
+组件还可以分发事件。要做到这一点，它们必须创建一个事件分发器。修改 `Inner.svelte`：
 
 ```html
 <script>
@@ -18,4 +18,4 @@ Components can also dispatch events. To do so, they must create an event dispatc
 </script>
 ```
 
-> `createEventDispatcher` must be called when the component is first instantiated — you can't do it later inside e.g. a `setTimeout` callback. This links `dispatch` to the component instance.
+> `createEventDispatcher`必须在组件第一次实例化时被调用--你不能这之后才调用它，比如放在 `setTimeout` 回调里。这样的话 `dispatch` 会被和组件实例相链接。

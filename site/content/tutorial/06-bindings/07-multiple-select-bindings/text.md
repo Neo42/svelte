@@ -2,9 +2,9 @@
 title: Select multiple
 ---
 
-A select can have a `multiple` attribute, in which case it will populate an array rather than selecting a single value.
+select可以使用 `multiple` 属性，这样的话，它将生成一个数组，而不是选择一个单一值。
 
-Returning to our [earlier ice cream example](tutorial/group-inputs), we can replace the checkboxes with a `<select multiple>`:
+回到我们的[前面的冰淇淋例子](tutorial/group-inputs)，我们可以用`<select multiple>`代替复选框。
 
 ```html
 <h2>Flavours</h2>
