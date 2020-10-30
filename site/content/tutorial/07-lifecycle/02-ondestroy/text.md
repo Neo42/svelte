@@ -2,9 +2,9 @@
 title: onDestroy
 ---
 
-To run code when your component is destroyed, use `onDestroy`.
+如果你想在组件被销毁时运行代码，那么就使用 `onDestroy`。
 
-For example, we can add a `setInterval` function when our component initialises, and clean it up when it's no longer relevant. Doing so prevents memory leaks.
+比如说，我们可以在组件初始化时添加一个 `setInterval` 函数，并在不再需要它时把它清理掉。这样做可以防止内存泄漏。
 
 ```html
 <script>
@@ -17,7 +17,7 @@ For example, we can add a `setInterval` function when our component initialises,
 </script>
 ```
 
-While it's important to call lifecycle functions during the component's initialisation, it doesn't matter *where* you call them from. So if we wanted, we could abstract the interval logic into a helper function in `utils.js`...
+尽管在组件初始化期间调用生命周期函数很重要，但是在 _什么地方_ 调用它们并不重要。 因此，如果需要，我们可以将时间间隔的逻辑抽象到 `utils.js` 中的一个辅助函数中。
 
 ```js
 import { onDestroy } from 'svelte';
@@ -31,7 +31,7 @@ export function onInterval(callback, milliseconds) {
 }
 ```
 
-...and import it into our component:
+...并将其导入到我们的组件中：
 
 ```html
 <script>

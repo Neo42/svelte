@@ -1,12 +1,12 @@
 ---
-title: beforeUpdate and afterUpdate
+title: beforeUpdate 和 afterUpdate
 ---
 
-The `beforeUpdate` function schedules work to happen immediately before the DOM has been updated. `afterUpdate` is its counterpart, used for running code once the DOM is in sync with your data.
+`beforeUpdate` 函数可以把动作安排在 DOM 即将更新时进行。`afterUpdate` 则与它对应，一旦DOM与您的数据同步后，用于运行代码。
 
-Together, they're useful for doing things imperatively that are difficult to achieve in a purely state-driven way, like updating the scroll position of an element.
+把它们结合在一起用的话，对于做一些单纯依靠状态驱动的方式很难做到的事情非常有用，比如更新元素的滚动位置。
 
-This [Eliza](https://en.wikipedia.org/wiki/ELIZA) chatbot is annoying to use, because you have to keep scrolling the chat window. Let's fix that.
+这个 [Eliza](https://en.wikipedia.org/wiki/ELIZA) 聊天机器人用起来很烦人，因为你得不停地滚动聊天窗口。我们来解决一下这个问题。
 
 ```js
 let div;
@@ -21,4 +21,4 @@ afterUpdate(() => {
 });
 ```
 
-Note that `beforeUpdate` will first run before the component has mounted, so we need to check for the existence of `div` before reading its properties.
+请注意，`beforeUpdate` 将在组件挂载之前首先运行，因此我们需要在读取 `div` 属性之前检查一下它是否存在。

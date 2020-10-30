@@ -2,7 +2,7 @@
 title: Contenteditable bindings
 ---
 
-Elements with a `contenteditable="true"` attribute support `textContent` and `innerHTML` bindings:
+带有 `contenteditable="true"` 属性的元素支持 `textContent` 和 `innerHTML` 绑定。
 
 ```html
 <div

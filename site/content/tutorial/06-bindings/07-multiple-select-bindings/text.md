@@ -1,5 +1,5 @@
 ---
-title: Select multiple
+title: select multiple
 ---
 
 select可以使用 `multiple` 属性，这样的话，它将生成一个数组，而不是选择一个单一值。

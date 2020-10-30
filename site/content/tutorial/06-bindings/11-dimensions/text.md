@@ -1,8 +1,8 @@
 ---
-title: Dimensions
+title: 尺寸
 ---
 
-Every block-level element has `clientWidth`, `clientHeight`, `offsetWidth` and `offsetHeight` bindings:
+每个块级元素都有 `clientWidth`、`clientHeight`、`offsetWidth` 和 `offsetHeight` 的绑定。
 
 ```html
 <div bind:clientWidth={w} bind:clientHeight={h}>
@@ -10,8 +10,8 @@ Every block-level element has `clientWidth`, `clientHeight`, `offsetWidth` and `
 </div>
 ```
 
-These bindings are readonly — changing the values of `w` and `h` won't have any effect.
+这些绑定是只读的 -- -- 改变 `w` 和 `h` 的值不会有任何影响。
 
-> Elements are measured using a technique similar to [this one](http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/). There is some overhead involved, so it's not recommended to use this for large numbers of elements.
+> 元素的测量使用的是一种类似于[这个](http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/)的技术。这会造成一些额外的性能开销，所以不建议在大量元素上使用这种方法。
 >
-> `display: inline` elements cannot be measured with this approach; nor can elements that can't contain other elements (such as `<canvas>`). In these cases you will need to measure a wrapper element instead.
+> 带有 `display: inline` 样式的元素不能用这种方法测量；不能包含其他元素的元素（如`<canvas>`）也不能。在这些情况下，你则需要测量一个包装元素。

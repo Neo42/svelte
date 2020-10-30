@@ -1,10 +1,10 @@
 ---
-title: Media elements
+title: 媒体元素
 ---
 
-The `<audio>` and `<video>` elements have several properties that you can bind to. This example demonstrates a few of them.
+`<audio>` 和 `<video>` 元素中有一些你可以做绑定的属性。这个例子演示了其中的几个。
 
-On line 116, add `currentTime={time}`, `duration` and `paused` bindings:
+在第116行添加`currentTime={time}`、`duration`和`paused`绑定：
 
 ```html
 <video
@@ -18,27 +18,27 @@ On line 116, add `currentTime={time}`, `duration` and `paused` bindings:
 ></video>
 ```
 
-> `bind:duration` is equivalent to `bind:duration={duration}`
+> `bind:duration` 相当于 `bind:duration={duration}`。
 
-Now, when you click on the video, it will update `time`, `duration` and `paused` as appropriate. This means we can use them to build custom controls.
+现在，当你点击视频时，它会根据情况更新 `time` 、`duration` 和 `paused`。这意味着我们可以用它们来构建自定义控件。
 
-> Ordinarily on the web, you would track `currentTime` by listening for `timeupdate` events. But these events fire too infrequently, resulting in choppy UI. Svelte does better — it checks `currentTime` using `requestAnimationFrame`.
+> 通常在网络上，你会通过监听 `timeupdate` 事件来跟踪 `currentTime`。但是这些事件发生的频率太低，导致用户界面不稳定。Svelte做得更好--它使用 `requestAnimationFrame` 来检查 `currentTime`。
 
-The complete set of bindings for `<audio>` and `<video>` is as follows — six *readonly* bindings...
+`<audio>` 和 `<video>` 的完整绑定如下--六个 _只读_ 绑定...：
 
-* `duration` (readonly) — the total duration of the video, in seconds
-* `buffered` (readonly) — an array of `{start, end}` objects
-* `seekable` (readonly) — ditto
-* `played` (readonly) — ditto
-* `seeking` (readonly) — boolean
-* `ended` (readonly) — boolean
+* `duration` (只读) — 视频的总长度，以秒为单位
+* `buffered` (只读) — 一个 `{start, end}` 对象组成的数组
+* `seekable` (只读) — 同上
+* `played` (只读) — 同上
+* `seeking` (只读) — 布尔值
+* `ended` (只读) — 布尔值
 
-...and five *two-way* bindings:
+...和五个 _双向_ 绑定。
 
-* `currentTime` — the current point in the video, in seconds
-* `playbackRate` — how fast to play the video, where `1` is 'normal'
-* `paused` — this one should be self-explanatory
-* `volume` — a value between 0 and 1
-* `muted` — a boolean value where true is muted
+* `currentTime` — 视频中的当前点，以秒为单位
+* `playbackRate` — 播放视频的速度，其中 `1` 为 "正常"
+* `paused` — 这个不用说了吧（布尔值）
+* `volume` — 一个在0和1之间的值。
+* `muted` — 一个布尔值，true为静音。
 
-Videos additionally have readonly `videoWidth` and `videoHeight` bindings.
+视频还有只读的`videoWidth`和`videoHeight`属性可以做绑定。
