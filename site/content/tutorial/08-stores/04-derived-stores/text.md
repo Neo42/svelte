@@ -1,8 +1,8 @@
 ---
-title: Derived stores
+title: 衍生 store 
 ---
 
-You can create a store whose value is based on the value of one or more *other* stores with `derived`. Building on our previous example, we can create a store that derives the time the page has been open:
+你可以用 `derived` 创建出这样一个 store ，它的值基于一个或多个 _其他_ store 的值。在上一个例子的基础上，我们可以创建一个推衍出页面打开时间的 store 。
 
 ```js
 export const elapsed = derived(
@@ -11,4 +11,4 @@ export const elapsed = derived(
 );
 ```
 
-> It's possible to derive a store from multiple inputs, and to explicitly `set` a value instead of returning it (which is useful for deriving values asynchronously). Consult the [API reference](docs#derived) for more information.
+> 我们也可以由多个输入衍生出一个 store ，并显式地 `set` 一个值，而不返回它（这对异步推衍值很有用）。更多信息请查看[API参考](docs#derived)。

@@ -1,10 +1,10 @@
 ---
-title: Spring
+title: spring
 ---
 
-The `spring` function is an alternative to `tweened` that often works better for values that are frequently changing.
+`spring`（弹簧） 函数是 `tweened` 的替代方案，通常对经常变化的值有更好的效果。
 
-In this example we have two stores — one representing the circle's coordinates, and one representing its size. Let's convert them to springs:
+在这个例子中，我们有两个 store --一个代表圆的坐标，一个代表圆的大小。让我们将它们转换为弹簧。
 
 ```html
 <script>
@@ -15,7 +15,7 @@ In this example we have two stores — one representing the circle's coordinates
 </script>
 ```
 
-Both springs have default `stiffness` and `damping` values, which control the spring's, well... springiness. We can specify our own initial values:
+两个弹簧都有默认的 `stiffness`（刚度） 和 `damping`（阻尼） 值，用于控制弹簧的...弹性。我们可以指定自己的初始值：
 
 ```js
 let coords = spring({ x: 50, y: 50 }, {
@@ -24,4 +24,4 @@ let coords = spring({ x: 50, y: 50 }, {
 });
 ```
 
-Waggle your mouse around, and try dragging the sliders to get a feel for how they affect the spring's behaviour. Notice that you can adjust the values while the spring is still in motion.
+晃动你的鼠标，并尝试拖动滑块来感受它们怎样影响弹簧的行为。注意，你可以在弹簧还在运动的时候调整数值。

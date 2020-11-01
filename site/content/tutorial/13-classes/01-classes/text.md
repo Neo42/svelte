@@ -1,8 +1,8 @@
 ---
-title: The class directive
+title: 类指令
 ---
 
-Like any other attribute, you can specify classes with a JavaScript attribute, seen here:
+像其他元素属性一样，你可以用 JavaScript 元素属性来指定元素的类，见这里。
 
 ```html
 <button
@@ -11,7 +11,7 @@ Like any other attribute, you can specify classes with a JavaScript attribute, s
 >foo</button>
 ```
 
-This is such a common pattern in UI development that Svelte includes a special directive to simplify it:
+这种模式在 UI 开发中太常见了，以至于 Svelte 专门有一个特殊的指令来简化它。
 
 ```html
 <button
@@ -20,4 +20,4 @@ This is such a common pattern in UI development that Svelte includes a special d
 >foo</button>
 ```
 
-The `selected` class is added to the element whenever the value of the expression is truthy, and removed when it's falsy.
+每当表达式的值是真值时，`selected`类就会被添加到元素中，当它是假值时，就会被删除。

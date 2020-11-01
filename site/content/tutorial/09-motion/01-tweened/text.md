@@ -1,10 +1,10 @@
 ---
-title: Tweened
+title: tweened
 ---
 
-Setting values and watching the DOM update automatically is cool. Know what's even cooler? *Tweening* those values. Svelte includes tools to help you build slick user interfaces that use animation to communicate changes.
+设置数值并看着DOM自动更新很酷。知道更酷的是什么吗？就是用这些值*制作 Tweening*。Svelte中囊括了一些工具，可以帮助你构建使用动画来传达变化的顺滑用户界面。
 
-Let's start by changing the `progress` store to a `tweened` value:
+我们先把 `progress` store 改为 `tweened`。
 
 ```html
 <script>
@@ -14,7 +14,7 @@ Let's start by changing the `progress` store to a `tweened` value:
 </script>
 ```
 
-Clicking the buttons causes the progress bar to animate to its new value. It's a bit robotic and unsatisfying though. We need to add an easing function:
+点击按钮就会导致进度条发生动画，到达其新值。不过这有点不自然，不太让人满意。我们需要增加一个缓动函数。
 
 ```html
 <script>
@@ -28,13 +28,13 @@ Clicking the buttons causes the progress bar to animate to its new value. It's a
 </script>
 ```
 
-> The `svelte/easing` module contains the [Penner easing equations](https://web.archive.org/web/20190805215728/http://robertpenner.com/easing/), or you can supply your own `p => t` function where `p` and `t` are both values between 0 and 1.
 
-The full set of options available to `tweened`:
+> `svelte / easing` 模块中囊括了[Penner缓动函数](https://web.archive.org/web/20190805215728/http://robertpenner.com/easing/)，或者您也可以使用自己的 `p => t` 函数，其中 `p` 和 `t` 都是介于 0 和 1 之间的值。
 
-* `delay` — milliseconds before the tween starts
-* `duration` — either the duration of the tween in milliseconds, or a `(from, to) => milliseconds` function allowing you to (e.g.) specify longer tweens for larger changes in value
-* `easing` — a `p => t` function
-* `interpolate` — a custom `(from, to) => t => value` function for interpolating between arbitrary values. By default, Svelte will interpolate between numbers, dates, and identically-shaped arrays and objects (as long as they only contain numbers and dates or other valid arrays and objects). If you want to interpolate (for example) colour strings or transformation matrices, supply a custom interpolator
+`tweened` 全部的可用选项：
 
-You can also pass these options to `progress.set` and `progress.update` as a second argument, in which case they will override the defaults. The `set` and `update` methods both return a promise that resolves when the tween completes.
+* `duration`----以毫秒为单位的tween持续时间，或 `(from, to) => milliseconds`函数，允许你(例如)为较大的数值变化指定更长的动画。
+* `easing` -- -- 一个 `p => t` 函数
+* `interpolate`--一个自定义的 `(from, to)=> t => value` 函数，用于对任意值进行插值。默认情况下，Svelte会对数字、日期和相同形状的数组和对象进行插值（只要它们只包含数字和日期或其他有效的数组和对象）。如果你想对（比如）颜色字符串或变换矩阵进行插值，请提供一个自定义的插值函数。
+
+你也可以将这些选项作为第二个参数传给 `progress.set` 和 `progress.update` ，这样的话，它们将覆盖默认值。`set` 和 `update` 方法都返回一个 promise，当动画完成时，这个 promise 会进行决议。

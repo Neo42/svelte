@@ -1,12 +1,12 @@
 ---
-title: Local transitions
+title: 局部过渡
 ---
 
-Ordinarily, transitions will play on elements when any container block is added or destroyed. In the example here, toggling the visibility of the entire list also applies transitions to individual list elements.
+通常情况下，当块级容器元素被添加或销毁时，过渡将在元素上播放。在这里的例子中，切换整个列表的可见性也会对单个列表元素进行过渡。
 
-Instead, we'd like transitions to play only when individual items are added and removed — in other words, when the user drags the slider.
+相反，我们希望只有在添加和删除单个项目时才播放过渡，也就是说，当用户拖动滑块时。
 
-We can achieve this with a *local* transition, which only plays when the immediate parent block is added or removed:
+我们可以通过 *局部* 过渡来实现这一点，它只会在直接的块级父元素被添加或删除时播放。
 
 ```html
 <div transition:slide|local>

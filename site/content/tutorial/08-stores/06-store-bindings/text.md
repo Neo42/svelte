@@ -1,19 +1,19 @@
 ---
-title: Store bindings
+title: store 绑定
 ---
 
-If a store is writable — i.e. it has a `set` method — you can bind to its value, just as you can bind to local component state.
+如果一个 store 是可写入的 -- 也就是说它有一个 `set` 方法 -- 你就可以对它的值进行绑定，就像你可以对本地组件的状态进行绑定一样。
 
-In this example we have a writable store `name` and a derived store `greeting`. Update the `<input>` element:
+在这个例子中，我们有一个可写入 store `name` 和一个衍生 store `greeting`。更新 `<input>` 元素。
 
 ```html
 <input bind:value={$name}>
 ```
 
-Changing the input value will now update `name` and all its dependents.
+Changing
+改变输入值就会马上更新 `name` 和所有要用到它的值。
 
-We can also assign directly to store values inside a component. Add a `<button>` element:
-
+我们也可以直接对处于一个组件内部的存储值进行赋值。添加一个 `<button>` 元素。
 ```html
 <button on:click="{() => $name += '!'}">
 	Add exclamation mark!

@@ -1,14 +1,14 @@
 ---
-title: In and out
+title: in 和 out
 ---
 
-Instead of the `transition` directive, an element can have an `in` or an `out` directive, or both together. Import `fade` alongside `fly`...
+元素中可以使用一个 `in` 或 `out` 指令，或者两者一起使用，这样可以替换 `transition` 指令的使用。导入 `fly` 和 `fade`...
 
 ```js
 import { fade, fly } from 'svelte/transition';
 ```
 
-...then replace the `transition` directive with separate `in` and `out` directives:
+.然后将 `transition` 指令替换为单独的 `in` 和 `out` 指令。
 
 ```html
 <p in:fly="{{ y: 200, duration: 2000 }}" out:fade>
@@ -16,4 +16,4 @@ import { fade, fly } from 'svelte/transition';
 </p>
 ```
 
-In this case, the transitions are *not* reversed.
+这样的话，过渡就是 _不可逆_ 的。

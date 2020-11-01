@@ -1,8 +1,8 @@
 ---
-title: Slots
+title: 插槽
 ---
 
-Just like elements can have children...
+就像元素可以有子元素一样...
 
 ```html
 <div>
@@ -10,7 +10,7 @@ Just like elements can have children...
 </div>
 ```
 
-...so can components. Before a component can accept children, though, it needs to know where to put them. We do this with the `<slot>` element. Put this inside `Box.svelte`:
+...组件也可以有子组件。不过，在组件接受子组件之前，它需要知道应该把它们放在哪里。我们通过 `<slot>` （插槽）元素来实现。把它放在 `Box.svelte` 里面。
 
 ```html
 <div class="box">
@@ -18,7 +18,7 @@ Just like elements can have children...
 </div>
 ```
 
-You can now put things in the box:
+你现在可以把东西放进盒子里了：
 
 ```html
 <Box>

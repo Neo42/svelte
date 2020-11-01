@@ -1,14 +1,14 @@
 ---
-title: Deferred transitions
+title: 推迟过渡
 ---
 
-A particularly powerful feature of Svelte's transition engine is the ability to *defer* transitions, so that they can be coordinated between multiple elements.
+Svelte的过渡引擎有一个尤其强大的功能，就是能够 _推迟_ 过渡，这样就可以对各个过渡在多个元素之间进行协调。
 
-Take this pair of todo lists, in which toggling a todo sends it to the opposite list. In the real world, objects don't behave like that — instead of disappearing and reappearing in another place, they move through a series of intermediate positions. Using motion can go a long way towards helping users understand what's happening in your app.
+以这对待办清单为例，其中切换一个待办会把它发送到另一个列表中。在现实世界中，对象并不会这样做——它们不会在另一个地方消失和重新出现，而是经过一系列中间位置进行移动。使用运动可以很好地帮助用户理解你的应用中所发生的事情。
 
-We can achieve this effect using the `crossfade` function, which creates a pair of transitions called `send` and `receive`. When an element is 'sent', it looks for a corresponding element being 'received', and generates a transition that transforms the element to its counterpart's position and fades it out. When an element is 'received', the reverse happens. If there is no counterpart, the `fallback` transition is used.
+我们可以使用 `crossfade`函数来实现这种效果，该函数创建了一对名为 `send` 和 `receive` 的过渡。当一个元素被 `send` 时，它会寻找一个相应的元素被 `receive` ，并生成一个转换，将元素转换到其对应的位置并淡出。当一个元素被 `receive` 时，情况正好相反。如果没有对应的元素，则使用`fallback` 过渡。
 
-Find the `<label>` element on line 65, and add the `send` and `receive` transitions:
+在第65行找到 `<label>` 元素，并添加 `send` 和 `receive` 过渡：
 
 ```html
 <label
@@ -17,7 +17,7 @@ Find the `<label>` element on line 65, and add the `send` and `receive` transiti
 >
 ```
 
-Do the same for the next `<label>` element:
+对下一个`<label>`元素做同样的处理。
 
 ```html
 <label
@@ -27,4 +27,4 @@ Do the same for the next `<label>` element:
 >
 ```
 
-Now, when you toggle items, they move smoothly to their new location. The non-transitioning items still jump around awkwardly — we can fix that in the next chapter.
+现在，当你切换项目时，它们会顺利地移动到新的位置。不带过渡的项目仍然会笨拙地跳来跳去--我们可以在下一章中解决这个问题。

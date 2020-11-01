@@ -2,7 +2,7 @@
 title: <svelte:component>
 ---
 
-A component can change its category altogether with `<svelte:component>`. Instead of a sequence of `if` blocks...
+一个组件可以用`<svelte:component>`完全改变它的类别。与其使用一连串的`if`块...
 
 ```html
 {#if selected.color === 'red'}
@@ -14,10 +14,10 @@ A component can change its category altogether with `<svelte:component>`. Instea
 {/if}
 ```
 
-...we can have a single dynamic component:
+...我们可以使用一个单一的动态组件：
 
 ```html
 <svelte:component this={selected.component}/>
 ```
 
-The `this` value can be any component constructor, or a falsy value — if it's falsy, no component is rendered.
+`this`值可以是任何组件构造函数，也可以是一个 falsy 值--如果是 falsy，就不会显示组件。

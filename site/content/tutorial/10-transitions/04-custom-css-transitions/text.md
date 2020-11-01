@@ -1,8 +1,8 @@
 ---
-title: Custom CSS transitions
+title: 自定义 CSS 过渡
 ---
 
-The `svelte/transition` module has a handful of built-in transitions, but it's very easy to create your own. By way of example, this is the source of the `fade` transition:
+`svelte/transition` 模块内置了一些的过渡，不过如果要创建自己的转场也很容易。例如，这是 `fade` 过渡的源代码。
 
 ```js
 function fade(node, {
@@ -19,19 +19,19 @@ function fade(node, {
 }
 ```
 
-The function takes two arguments — the node to which the transition is applied, and any parameters that were passed in — and returns a transition object which can have the following properties:
+该函数接收两个参数——应用过渡的节点和一个被传进来的任意参数——并返回一个过渡对象，该对象可以具有以下属性。
 
-* `delay` — milliseconds before the transition begins
-* `duration` — length of the transition in milliseconds
-* `easing` — a `p => t` easing function (see the chapter on [tweening](tutorial/tweened))
-* `css` — a `(t, u) => css` function, where `u === 1 - t`
-* `tick` — a `(t, u) => {...}` function that has some effect on the node
+* `delay` —— 过渡开始前要延迟多少毫秒。
+* `duration` —— 过渡的时长，以毫秒为单位。
+* `easing` —— 一个 `p => t` 缓动函数（见[制作 tweening](tutorial/tweened)）
+* `css` —— `(t, u) => css` 函数，其中`u === 1 - t`。
+* `tick` —— 一个 `(t, u) => {...}` 函数，对节点有一定影响。
 
-The `t` value is `0` at the beginning of an intro or the end of an outro, and `1` at the end of an intro or beginning of an outro.
+`t`值在 intro 开始或 outro 结束时为`0`，在 intro 结束或 outro 开始时为`1`。
 
-Most of the time you should return the `css` property and *not* the `tick` property, as CSS animations run off the main thread to prevent jank where possible. Svelte 'simulates' the transition and constructs a CSS animation, then lets it run.
+大多数情况下，你应该返回 `css` 属性，而 _不是_ `tick`属性，因为为了尽可能防止掉帧，CSS动画是在主线程之外运行的。Svelte会对过渡进行"模拟"并构建一个CSS动画，然后让它运行。
 
-For example, the `fade` transition generates a CSS animation somewhat like this:
+例如，`fade` 过渡会生成一个CSS动画，有点像这样：
 
 ```css
 0% { opacity: 0 }
@@ -41,7 +41,7 @@ For example, the `fade` transition generates a CSS animation somewhat like this:
 100% { opacity: 1 }
 ```
 
-We can get a lot more creative though. Let's make something truly gratuitous:
+我们还可以玩得更花一点，搞点实在是莫名其妙的东西。
 
 ```html
 <script>
@@ -69,4 +69,4 @@ We can get a lot more creative though. Let's make something truly gratuitous:
 </script>
 ```
 
-Remember: with great power comes great responsibility.
+请记住：能力越大，责任越大。

@@ -31,7 +31,7 @@ export function onInterval(callback, milliseconds) {
 }
 ```
 
-...并将其导入到我们的组件中：
+...并把它导入到我们的组件中：
 
 ```html
 <script>

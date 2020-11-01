@@ -2,13 +2,13 @@
 title: <svelte:window> bindings
 ---
 
-We can also bind to certain properties of `window`, such as `scrollY`. Update line 7:
+我们也可以对 `window` 的某些属性进行绑定，比如`scrollY`。更新第7行：
 
 ```html
 <svelte:window bind:scrollY={y}/>
 ```
 
-The list of properties you can bind to is as follows:
+你可以绑定的属性列表如下：
 
 * `innerWidth`
 * `innerHeight`
@@ -18,4 +18,4 @@ The list of properties you can bind to is as follows:
 * `scrollY`
 * `online` — an alias for `window.navigator.onLine`
 
-All except `scrollX` and `scrollY` are readonly.
+除了 `scrollX` 和 `scrollY` 之外，其他属性都是只读的。

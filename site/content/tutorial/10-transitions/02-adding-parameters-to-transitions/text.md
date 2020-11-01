@@ -1,8 +1,8 @@
 ---
-title: Adding parameters
+title: 添加参数
 ---
 
-Transition functions can accept parameters. Replace the `fade` transition with `fly`...
+过渡函数可以接受参数。 用 `fly` 代替 `fade` 过渡...
 
 ```html
 <script>
@@ -11,7 +11,7 @@ Transition functions can accept parameters. Replace the `fade` transition with `
 </script>
 ```
 
-...and apply it to the `<p>` along with some options:
+...并把它与一些选项一起应用到 `<p>` 上。
 
 ```html
 <p transition:fly="{{ y: 200, duration: 2000 }}">
@@ -19,4 +19,4 @@ Transition functions can accept parameters. Replace the `fade` transition with `
 </p>
 ```
 
-Note that the transition is *reversible* — if you toggle the checkbox while the transition is ongoing, it transitions from the current point, rather than the beginning or the end.
+请注意，过渡是 _可逆的_ --如果您在过渡进行时点击复选框，它将从当前点开始过渡，而不是从开头或末尾。

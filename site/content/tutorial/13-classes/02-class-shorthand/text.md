@@ -1,8 +1,8 @@
 ---
-title: Shorthand class directive
+title: 简写类指令
 ---
 
-Often, the name of the class will be the same as the name of the value it depends on:
+通常情况下，类的名称会和决定它是否存在的值的名称相同。
 
 ```html
 <div class:big={big}>
@@ -10,7 +10,7 @@ Often, the name of the class will be the same as the name of the value it depend
 </div>
 ```
 
-In those cases we can use a shorthand form:
+这种情况下，我们可以使用简写形式。
 
 ```html
 <div class:big>

@@ -1,5 +1,5 @@
 ---
-title: Component bindings
+title: 组件绑定
 ---
 
 与你可以绑定 DOM 元素的属性类似，你也可以对组件的 prop 做绑定。例如，我们可以像绑定一个表单元素一样对这个 `<Keypad>` 组件的 `value` prop 做绑定。

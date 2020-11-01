@@ -1,8 +1,8 @@
 ---
-title: Slot fallbacks
+title: 插槽后备
 ---
 
-A component can specify *fallbacks* for any slots that are left empty, by putting content inside the `<slot>` element:
+一个组件可以通过在 `<slot>` 元素中放入内容，为任何空着的插槽指定 _后备内容_。
 
 ```html
 <div class="box">
@@ -12,7 +12,7 @@ A component can specify *fallbacks* for any slots that are left empty, by puttin
 </div>
 ```
 
-We can now create instances of `<Box>` without any children:
+现在我们可以在没有任何子组件的情况下创建 `<Box>` 的实例。
 
 ```html
 <Box>

@@ -16,7 +16,7 @@ title: await 代码块
 
 Svelte 只会处理最新的 promise，也就是说，你不用担心多个 promise 出现冲突。
 
-如果你知道你的 promise 不可能出现拒绝，你就可以把 `catch` 代码块省略掉。如果你不想在 promise 决议之前渲染任何东西，你也可以省略第一个代码块。
+如果你知道你的 promise 不可能出现拒绝，你就可以把 `catch` 代码块省略掉。如果你不想在 promise 决议之前显示任何东西，你也可以省略第一个代码块。
 
 ```html
 {#await promise then value}

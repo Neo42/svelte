@@ -1,10 +1,10 @@
 ---
-title: Auto-subscriptions
+title: 自动订阅
 ---
 
-The app in the previous example works, but there's a subtle bug — the `unsubscribe` function never gets called. If the component was instantiated and destroyed many times, this would result in a *memory leak*.
+前面例子中的应用程序已经可以正常使用了，但还有一个细微的 bug --`unsubscribe` 函数从未被调用。如果组件被多次实例化和销毁，这个 bug 将会导致 _内存泄漏_。
 
-One way to fix it would be to use the `onDestroy` [lifecycle hook](tutorial/ondestroy):
+解决这个问题的方法之一是使用`onDestroy`[生命周期钩子](tutorial/ondestroy)。
 
 ```html
 <script>
@@ -26,7 +26,7 @@ One way to fix it would be to use the `onDestroy` [lifecycle hook](tutorial/onde
 <h1>The count is {count_value}</h1>
 ```
 
-It starts to get a bit boilerplatey though, especially if your component subscribes to multiple stores. Instead, Svelte has a trick up its sleeve — you can reference a store value by prefixing the store name with `$`:
+但这样会开始变得有点儿像模板代码，尤其是当你的组件订阅了多个 store 时。与其用这个方法，Svelte有一个小技巧--你可以通过在 store 名称前加上`$`来引用一个 store 的值。
 
 ```html
 <script>
@@ -39,8 +39,8 @@ It starts to get a bit boilerplatey though, especially if your component subscri
 <h1>The count is {$count}</h1>
 ```
 
-> Auto-subscription only works with store variables that are declared (or imported) at the top-level scope of a component.
+> 自动订阅只适用于在组件顶层作用域声明（或导入）的 store 变量。
 
-You're not limited to using `$count` inside the markup, either — you can use it anywhere in the `<script>` as well, such as in event handlers or reactive declarations.
+你也不仅可以在标记中使用 `$count` ，还可以在 `<script>` 中的任何地方使用它，比如在事件处理程序或响应式声明中。
 
-> Any name beginning with `$` is assumed to refer to a store value. It's effectively a reserved character — Svelte will prevent you from declaring your own variables with a `$` prefix.
+> 任何以 `$` 开头的名字都被认为是在引用一个 store 值。（在 Svelte 中）它实际上被用作一个保留字符--Svelte会阻止你用 `$` 前缀来声明自己的变量。

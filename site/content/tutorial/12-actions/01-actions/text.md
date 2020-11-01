@@ -1,21 +1,21 @@
 ---
-title: The use directive
+title: use 指令
 ---
 
-Actions are essentially element-level lifecycle functions. They're useful for things like:
+action 其实就是元素级的生命周期功能。它们对于这些东西很有用：
 
-* interfacing with third-party libraries
-* lazy-loaded images
-* tooltips
-* adding custom event handlers
+* 与第三方库进行交互
+* 图片的懒加载
+* 工具提示
+* 添加自定义事件处理程序
 
-In this app, we want to make the orange box 'pannable'. It has event handlers for the `panstart`, `panmove` and `panend` events, but these aren't native DOM events. We have to dispatch them ourselves. First, import the `pannable` function...
+在这个应用程序中，我们想让橙色的盒子"pannable"(可以平移)。它有 `panstart` 、`panmove` 和 `panend` 事件的处理程序，但这些不是原生的 DOM 事件。我们必须自己分发它们。首先，导入 `pannable` 函数...
 
 ```js
 import { pannable } from './pannable.js';
 ```
 
-...then use it with the element:
+......然后把它跟元素一起使用。
 
 ```html
 <div class="box"
@@ -29,9 +29,9 @@ import { pannable } from './pannable.js';
 ></div>
 ```
 
-Open the `pannable.js` file. Like transition functions, an action function receives a `node` and some optional parameters, and returns an action object. That object can have a `destroy` function, which is called when the element is unmounted.
+打开 `pannable.js` 文件。像过渡函数一样，action 函数接收一个 `node` 和一些可选的参数，并返回一个 action 对象。这个对象可以有一个 `destroy` 函数，当元素被解除挂载时，这个函数会被调用。
 
-We want to fire `panstart` event when the user mouses down on the element, `panmove` events (with `dx` and `dy` properties showing how far the mouse moved) when they drag it, and `panend` events when they mouse up. One possible implementation looks like this:
+我们希望当用户在元素内按下鼠标按键时触发 `panstart` 事件，当用户拖动元素时触发 `panmove` 事件（`dx` 和 `dy` 属性会显示鼠标移动的距离），当用户向上抬起鼠标按键时触发 "panend "事件。一种实现可能是这样的。
 
 ```js
 export function pannable(node) {
@@ -83,6 +83,6 @@ export function pannable(node) {
 }
 ```
 
-Update the `pannable` function and try moving the box around.
+修改 `pannable` 函数，然后试着移动盒子。
 
-> This implementation is for demonstration purposes — a more complete one would also consider touch events.
+> 这个实现只是为了演示目的--一个更完整的实现还应该考虑触屏事件。

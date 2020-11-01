@@ -2,7 +2,7 @@
 title: <svelte:head>
 ---
 
-The `<svelte:head>` element allows you to insert elements inside the `<head>` of your document:
+`<svelte:head>` 元素可以让你在文档的 `<head>` 中插入元素。
 
 ```html
 <svelte:head>
@@ -10,4 +10,4 @@ The `<svelte:head>` element allows you to insert elements inside the `<head>` of
 </svelte:head>
 ```
 
-> In server-side rendering (SSR) mode, contents of `<svelte:head>` are returned separately from the rest of your HTML.
+> 在服务器端渲染(SSR)模式下，`<svelte:head>` 的内容会从 HTML 的其他部分分开返回。

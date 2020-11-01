@@ -14,4 +14,4 @@ title: 尺寸
 
 > 元素的测量使用的是一种类似于[这个](http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/)的技术。这会造成一些额外的性能开销，所以不建议在大量元素上使用这种方法。
 >
-> 带有 `display: inline` 样式的元素不能用这种方法测量；不能包含其他元素的元素（如`<canvas>`）也不能。在这些情况下，你则需要测量一个包装元素。
+> 带有 `display: inline` 样式的元素不能用这种方法测量；不能包含其他元素的元素（如`<canvas>`）也不能。在这种情况下，你就需要测量一个包装元素。

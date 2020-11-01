@@ -1,10 +1,10 @@
 ---
-title: Slot props
+title: 插槽 prop
 ---
 
-In this app, we have a `<Hoverable>` component that tracks whether the mouse is currently over it. It needs to pass that data *back* to the parent component, so that we can update the slotted contents.
+在这个应用中，我们有一个 `<Hoverable>` 组件，它可以跟踪鼠标现在是不是悬浮它上面。它需要将这些数据 *回传* 给父组件，这样我们就可以更新插槽中的内容。
 
-For this, we use *slot props*. In `Hoverable.svelte`, pass the `hovering` value into the slot:
+为此，我们使用 *插槽 prop* 。在 `Hoverable.svelte` 中，将 `hovering` 值传入插槽中。
 
 ```html
 <div on:mouseenter={enter} on:mouseleave={leave}>
@@ -12,9 +12,9 @@ For this, we use *slot props*. In `Hoverable.svelte`, pass the `hovering` value 
 </div>
 ```
 
-> Remember you can also use the `{hovering}` shorthand, if you prefer.
+> 记住，如果你愿意，你也可以使用 `{hovering}` 简写。
 
-Then, to expose `hovering` to the contents of the `<Hoverable>` component, we use the `let` directive:
+然后，为了让 `hovering` 暴露在 `<Hoverable>` 组件的内容中，我们使用 `let` 指令。
 
 ```html
 <Hoverable let:hovering={hovering}>
@@ -28,7 +28,7 @@ Then, to expose `hovering` to the contents of the `<Hoverable>` component, we us
 </Hoverable>
 ```
 
-You can rename the variable, if you want — let's call it `active` in the parent component:
+如果你愿意，你可以重命名这个变量 —— 我们在父组件中就把它称作 `active`。
 
 ```html
 <Hoverable let:hovering={active}>
@@ -42,6 +42,6 @@ You can rename the variable, if you want — let's call it `active` in the paren
 </Hoverable>
 ```
 
-You can have as many of these components as you like, and the slotted props will remain local to the component where they're declared.
+这样的组件你想用多少都可以，而且插槽中的 prop 的有效范围会一直保持在声明它们的组件内部。
 
-> Named slots can also have props; use the `let` directive on an element with a `slot="..."` attribute, instead of on the component itself.
+> 命名的插槽也可以用 prop；要在带有 `slot="..."` 属性的元素上使用 `let` 指令，而不是在组件本身上使用。

@@ -1,8 +1,8 @@
 ---
-title: Custom JS transitions
+title: 自定义 JS 过渡
 ---
 
-While you should generally use CSS for transitions as much as possible, there are some effects that can't be achieved without JavaScript, such as a typewriter effect:
+尽管一般来说，你应该尽可能地使用CSS来实现过渡，但有些效果如果不用JavaScript是无法实现的，比如打字机效果。
 
 ```js
 function typewriter(node, { speed = 50 }) {
