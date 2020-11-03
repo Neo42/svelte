@@ -4,7 +4,7 @@ title: 基础
 
 欢迎来到 Svelte 教程。这个教程将教给你一切你需要知道的东西，让你轻松地搭建快速、轻巧的 Web 应用程序。
 
-你也可以参考[API 文档](docs)和[示例](examples)，或者如果你等不及马上就想在你的电脑上开搞：[60 秒快速开始](blog/the-easiest-way-to-get-started)。
+你也可以参考[API 文档](docs)和[示例](examples)，或者如果你迫不及待马上就想在电脑上开搞：[60 秒快速开始](blog/the-easiest-way-to-get-started)。
 
 ## 什么是 Svelte
 

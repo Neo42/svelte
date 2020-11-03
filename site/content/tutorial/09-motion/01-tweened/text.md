@@ -4,7 +4,7 @@ title: tweened
 
 设置数值并看着DOM自动更新很酷。知道更酷的是什么吗？就是用这些值*制作 Tweening*。Svelte中囊括了一些工具，可以帮助你构建使用动画来传达变化的顺滑用户界面。
 
-我们先把 `progress` store 改为 `tweened`。
+我们先把 `progress` Store 改为 `tweened`。
 
 ```html
 <script>
@@ -29,7 +29,7 @@ title: tweened
 ```
 
 
-> `svelte / easing` 模块中囊括了[Penner缓动函数](https://web.archive.org/web/20190805215728/http://robertpenner.com/easing/)，或者您也可以使用自己的 `p => t` 函数，其中 `p` 和 `t` 都是介于 0 和 1 之间的值。
+> `svelte / easing` 模块中囊括了[Penner缓动函数](https://web.archive.org/web/20190805215728/http://robertpenner.com/easing/)，或者你也可以使用自己的 `p => t` 函数，其中 `p` 和 `t` 都是介于 0 和 1 之间的值。
 
 `tweened` 全部的可用选项：
 

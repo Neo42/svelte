@@ -1,10 +1,10 @@
 ---
-title: store 绑定
+title: Store 绑定
 ---
 
-如果一个 store 是可写入的 -- 也就是说它有一个 `set` 方法 -- 你就可以对它的值进行绑定，就像你可以对本地组件的状态进行绑定一样。
+如果一个 Store 是可写入的 -- 也就是说它有一个 `set` 方法 -- 你就可以对它的值进行绑定，就像你可以对本地组件的状态进行绑定一样。
 
-在这个例子中，我们有一个可写入 store `name` 和一个衍生 store `greeting`。更新 `<input>` 元素。
+在这个例子中，我们有一个可写入 Store `name` 和一个衍生 Store `greeting`。更新 `<input>` 元素。
 
 ```html
 <input bind:value={$name}>

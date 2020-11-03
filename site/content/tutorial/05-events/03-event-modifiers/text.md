@@ -26,4 +26,4 @@ title: 事件修饰符
 * `once` - 在第一次运行后删除处理程序。
 * `self` - 只有当 `event.target` 是元素本身时才触发处理程序。
 
-您可以将修饰符连锁使用，例如 `on:click|once|capture={...}`。
+你可以将修饰符连锁使用，例如 `on:click|once|capture={...}`。

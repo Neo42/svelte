@@ -2,9 +2,9 @@
 title: The @debug tag
 ---
 
-Occasionally, it's useful to inspect a piece of data as it flows through your app.
+有时候，在数据流经您的应用程序时对其进行检查会很有用。
 
-One approach is to use `console.log(...)` inside your markup. If you want to pause execution, though, you can use the `{@debug ...}` tag with a comma-separated list of values you want to inspect:
+一种方法是在标记内使用`console.log(...)`。 但如果你想要暂停执行，可以将`{@debug ...}`标记与一个要检查的值组成的、以逗号分隔的列表一起使用：
 
 ```html
 {@debug user}
@@ -12,4 +12,4 @@ One approach is to use `console.log(...)` inside your markup. If you want to pau
 <h1>Hello {user.firstname}!</h1>
 ```
 
-If you now open your devtools and start interacting with the `<input>` elements, you'll trigger the debugger as the value of `user` changes.
+现在如果你打开你的开发者工具并开始与 `<input>` 元素进行交互的话，你就会在 `user` 发生改变时触发调试器。

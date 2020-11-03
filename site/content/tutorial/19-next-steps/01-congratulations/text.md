@@ -1,11 +1,11 @@
 ---
-title: Congratulations!
+title: 恭喜！
 ---
 
-You've now finished the Svelte tutorial and are ready to start building apps. You can refer back to individual chapters at any time (click the title above to reveal a dropdown) or continue your learning via the [API reference](docs), [Examples](examples) and [Blog](blog). If you're a Twitter user, you can get updates via [@sveltejs](https://twitter.com/sveltejs).
+您现在已经学完了 Svelte 教程并准备好开始构建应用程序了。你可以在任何时候回过头来参考各个章节（点击上面的标题可以看到一个下拉菜单），或者通过[API参考](docs)、[示例](examples)和[博客](blog)继续学习。如果你是 Twitter 用户，你可以通过[@sveltejs](https://twitter.com/sveltejs)获取动态。
 
-To get set up in your local development environment, check out [the quickstart guide](blog/the-easiest-way-to-get-started).
+如想在本地开发环境中进行配置，请查看[快速开始指南](blog/the-easiest-way-to-started)。
 
-If you're looking for a more expansive framework that includes routing, server-side rendering and everything else, take a look at [Sapper](https://sapper.svelte.dev).
+如果你正在寻找一个包括路由、服务器端渲染和其他所有功能的、更容易扩展的框架，了解一下[Sapper](https://sapper.svelte.dev)。
 
-Most importantly: since you're now a member of the Svelte community, you should [join our friendly Discord chatroom](chat). That's where you'll find fellow Svelte users, and it's where we plan the future of the framework.
+最重要的是：既然你现在是Svelte社区的一员了，你就应该[加入我们友好的 Discord 聊天室](chat)。你会在这里找到 Svelte 用户小伙伴，同时这里也是我们为框架规划未来的地方。

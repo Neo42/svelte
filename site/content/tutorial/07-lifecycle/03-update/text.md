@@ -2,7 +2,7 @@
 title: beforeUpdate 和 afterUpdate
 ---
 
-`beforeUpdate` 函数可以把动作安排在 DOM 即将更新时进行。`afterUpdate` 则与它对应，一旦DOM与您的数据同步后，用于运行代码。
+`beforeUpdate` 函数可以把动作安排在 DOM 即将更新时进行。`afterUpdate` 则与它对应，一旦DOM与你的数据同步后，用于运行代码。
 
 把它们结合在一起用的话，对于做一些单纯依靠状态驱动的方式很难做到的事情非常有用，比如更新元素的滚动位置。
 
