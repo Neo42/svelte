@@ -1,28 +1,28 @@
 ---
-title: Checking for slot content
+title: 检查插槽内容
 ---
 
-In some cases, you may want to control parts of your component based on whether the parent passes in content for a certain slot. Perhaps you have a wrapper around that slot, and you don't want to render it if the slot is empty. Or perhaps you'd like to apply a class only if the slot is present. You can do this by checking the properties of the special `$$slots` variable.
+在某些情况下，你可能想根据父组件向某个插槽传入了内容与否来控制你组件的若干个部分。也许你在这个插槽外加了一层包装，如果这个插槽是空的，你就希望不渲染这层包装。或者也许你想只在插槽存在时添加一个类。你可以通过检查特殊变量 `$$slots` 的属性来实现。
 
-`$$slots` is an object whose keys are the names of the slots passed in by the parent component. If the parent leaves a slot empty, then `$$slots` will not have an entry for that slot.
+`$$slots` 是一个对象，它的键是父组件传入的插槽的名称。如果父组件将一个插槽留空，那么`$$slots`将不会保留这个插槽的记录。
 
-Notice that both instances of `<Project>` in this example render a container for comments and a notification dot, even though only one has comments. We want to use `$$slots` to make sure we only render these elements when the parent `<App>` passes in content for the `comments` slot.
+请注意，在这个例子中，两个 `<Project>` 实例都渲染了一个评论区和一个通知圆点——尽管只有一个里面有评论。我们要使用 `$$slots` 来确保只有当父组件 `<App>` 为 `comments` 插槽传入内容时，我们才渲染这些元素。
 
-In `Project.svelte`, update the `class:has-discussion` directive on the `<article>`:
+在 `Project.svelte` 中，更新 `<article>` 的 `class:has-discussion` 指令：
 
 ```html
-<article class:has-discussion={$$slots.comments}>
+<article class:has-discussion="{$$slots.comments}"></article>
 ```
 
-Next, wrap the `comments` slot and its wrapping `<div>` in an `if` block that checks `$$slots`:
+接下来，把 `comments` 插槽及包装它的 `<div>` 放在一个检查 `$$slots` 的 `if` 代码块中：
 
 ```html
 {#if $$slots.comments}
-	<div class="discussion">
-		<h3>Comments</h3>
-		<slot name="comments"></slot>
-	</div>
+<div class="discussion">
+  <h3>Comments</h3>
+  <slot name="comments"></slot>
+</div>
 {/if}
 ```
 
-Now the comments container and the notification dot won't render when `<App>` leaves the `comments` slot empty.
+现在，当 `<App>`中的 `comments` 插槽为空时，评论区和通知点将不会被渲染。

@@ -20,4 +20,4 @@ title: <svelte:component>
 <svelte:component this={selected.component}/>
 ```
 
-`this`值可以是任何组件构造函数，也可以是一个 falsy 值--如果是 falsy，就不会显示组件。
+`this`值可以是任何组件构造函数，也可以是一个 falsy 值--如果是 falsy，就不会渲染组件。

@@ -4,7 +4,7 @@ title: setContext 和 getContext
 
 Context API 提供了一种机制，让组件之间可以相互 "对话" 而不需要把数据和函数作为 props 传递，也不需要分发大量的事件。这是一个高级的功能，但是很有用。
 
-以这个使用[Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/overview/)地图的示例应用为例。我们想使用 `<MapMarker>` 组件来显示标记，但我们并不希望把一个对底层的 Mapbox 实例的引用作为 Contextprop 传递给每一个组件。
+以这个使用[Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/overview/)地图的示例应用为例。我们想使用 `<MapMarker>` 组件来渲染标记，但我们并不希望把一个对底层的 Mapbox 实例的引用作为 Contextprop 传递给每一个组件。
 
 Context API有两半-- `setContext` 和 `getContext` 。如果一个组件调用了 `setContext(key，context)`，那么它的所有*子*组件都可以用 `const context = getContext(key)`来检索 Context。
 
