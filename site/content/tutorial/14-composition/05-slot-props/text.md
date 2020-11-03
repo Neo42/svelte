@@ -1,10 +1,10 @@
 ---
-title: 插槽 props
+title: 插槽 Props
 ---
 
 在这个应用中，我们有一个 `<Hoverable>` 组件，它可以跟踪鼠标现在是不是悬浮它上面。它需要将这些数据 *回传* 给父组件，这样我们就可以更新插槽中的内容。
 
-为此，我们使用 *插槽 props* 。在 `Hoverable.svelte` 中，将 `hovering` 值传入插槽中。
+为此，我们使用 *插槽 Props* 。在 `Hoverable.svelte` 中，将 `hovering` 值传入插槽中。
 
 ```html
 <div on:mouseenter={enter} on:mouseleave={leave}>
@@ -42,6 +42,6 @@ title: 插槽 props
 </Hoverable>
 ```
 
-这样的组件你想用多少都可以，而且插槽中的 props 的有效范围会一直保持在声明它们的组件内部。
+这样的组件你想用多少都可以，而且插槽中的 Props 的有效范围会一直保持在声明它们的组件内部。
 
 > 命名的插槽也可以用 props；要在带有 `slot="..."` 属性的元素上使用 `let` 指令，而不是在组件本身上使用。
