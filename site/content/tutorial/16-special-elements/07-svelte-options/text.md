@@ -20,11 +20,11 @@ title: <svelte:options>
 
 这里可以设置的选项有
 
-* `immutable={true}`--你永远不使用可变数据，所以编译器可以通过简单地检查引用相等性来确定值是否发生了变化。
+* `immutable={true}` - 永远不使用可变数据，所以编译器可以通过简单地检查引用相等性来确定值是否发生了变化。
 * `immutable={false}` - 默认值。Svelte 对可变对象是否发生变化比较保守。
 * `accessors={true}` - 为组件的道具添加 getter 和 setter 。
 * `accessors={false}` - 默认值。
-* `namespace="..."` - 该组件将在其中被使用的命名空间，最常见的是`"svg"`。
+* `namespace="..."` - 其中使用该组件的命名空间，最常见的是`"svg"`。
 * `tag="..."` - 在把该组件编译为自定义元素时要使用的名称。
 
 想了解这些选项的更多信息，请查阅[API参考](docs)。
