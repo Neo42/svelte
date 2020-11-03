@@ -2,7 +2,7 @@
 title: 默认值
 ---
 
-我们可以很容易地在 `Nested.svelte` 中为 prop 指定默认值。
+我们可以很容易地在 `Nested.svelte` 中为 props 指定默认值。
 
 ```html
 <script>
