@@ -1,5 +1,5 @@
 ---
-title: The @debug tag
+title: @debug 标签
 ---
 
 有时候，在数据流经您的应用程序时对其进行检查会很有用。
